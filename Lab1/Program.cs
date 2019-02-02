@@ -6,6 +6,7 @@
  * https://docs.microsoft.com/ru-ru/visualstudio/debugger/debugger-feature-tour?view=vs-2017
  * 
  * Часть2. Реализовать закоментированные методы из класса Lab1Array
+ * Динамические структуры данных не использовать!
  */
 using System;
 
