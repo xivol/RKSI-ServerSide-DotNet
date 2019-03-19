@@ -27,6 +27,8 @@ namespace Lab5
 
             if (calc.Result != null)
                 await context.Response.WriteAsync($"<pre>{calc}</pre>");
+            else
+                await context.Response.WriteAsync($"<h1>No Data Found</h1>");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +42,6 @@ namespace Lab5
 
             app.UseMiddleware<Middleware.ErrorHandler>();
             app.UseMiddleware<Middleware.Router>();
-            app.UseMiddleware<Middleware.CalcParser>();
 
             app.Run(AsyncWriter);
         }

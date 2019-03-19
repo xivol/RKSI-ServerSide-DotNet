@@ -13,20 +13,6 @@ namespace Lab5.Middleware
         {
             string path = context.Request.Path.Value.ToLower();
 
-            await context.Response.WriteAsync(
-                "<div><form action=\"/calc\" method=\"GET\">" +
-                "<input type = \"text\" name = \"left\"/>" +
-                "<select name = \"op\" value = \"+\" >" +
-                "<option value=\"+\">+</option>" +
-                "<option value=\"*\">*</option>" +
-                "<option value=\"-\">-</option>" +
-                "<option value=\"/\">/</option>" +
-                "</select>" +
-                "<input type = \"text\" name = \"right\"/>" +
-                "<input type = \"submit\" />" +
-                "</form ></div>"
-            ); 
-
             if (path == "/calc")
             {
                 await base.InvokeAsync(context);
